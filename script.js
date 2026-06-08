@@ -25,13 +25,26 @@ else {
     weatherFactor = 0.8;
 }
 const cost = kwh * 150 * weatherFactor;
+let recommendTemp = 26;
+let saveMoney = Math.round(cost * 0.15);
 
 document.getElementById("result").innerHTML = `
-<h2>${data.region}</h2>
-<p>기온 : ${data.temp}℃</p>
-<p>습도 : ${data.humidity}%</p>
-<p>예상 사용전력 : ${kwh.toFixed(2)} kWh</p>
-<p>예상 전기요금 : ${cost.toFixed(0)} 원</p>
+<h2>📍 ${data.region}</h2>
+
+<p>🌡 현재기온 : ${data.temp}℃</p>
+<p>💧 현재습도 : ${data.humidity}%</p>
+
+<hr>
+
+<p>❄ 추천 설정온도 : ${recommendTemp}℃</p>
+
+<p>⚡ 예상 사용전력 : ${kwh.toFixed(2)} kWh</p>
+
+<p><b>💰 예상 냉방비 : ${cost.toFixed(0)} 원</b></p>
+
+<p style="color:green">
+💵 예상 절감금액 : 약 ${saveMoney} 원
+</p>
 `;
 
 }
