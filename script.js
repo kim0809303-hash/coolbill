@@ -2,7 +2,7 @@ async function loadWeather() {
 
 const stn = document.getElementById("region").value;
 
-const power = Number(document.getElementById("power").value);
+const power = Number(document.getElementById("aircon").value);
 const hour = Number(document.getElementById("hour").value);
 
 const res = await fetch(`/api/weather?stn=${stn}`);
