@@ -35,7 +35,7 @@ const hh = String(hour).padStart(2,"0");
         const dataLine = lines[0];
 
         const arr = dataLine.trim().split(/\s+/);
-        const regionName = {
+    const regionName = {
   "108":"서울",
   "159":"부산",
   "143":"대구",
@@ -51,9 +51,24 @@ const hh = String(hour).padStart(2,"0");
   "135":"추풍령",
   "140":"군산",
   "146":"전주",
-  "155":"창원"
-};
+  "155":"창원",
 
+  "192":"진주",
+  "105":"강릉",
+  "101":"춘천",
+  "114":"원주",
+  "90":"속초",
+  "127":"충주",
+  "168":"여수",
+  "165":"목포",
+  "170":"완도",
+  "189":"서귀포",
+  "188":"성산",
+  "136":"안동",
+  "137":"상주",
+  "130":"울진",
+  "115":"울릉도"
+};
         res.status(200).json({
            region: regionName[stn],
             temp: arr[11],
