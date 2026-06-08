@@ -9,7 +9,13 @@ export default async function handler(req, res) {
     const yyyy = tm.getFullYear();
     const mm = String(tm.getMonth()+1).padStart(2,"0");
     const dd = String(tm.getDate()).padStart(2,"0");
-    const hh = String(tm.getHours()).padStart(2,"0");
+    let hour = tm.getHours() - 1;
+
+if(hour < 0){
+    hour = 23;
+}
+
+const hh = String(hour).padStart(2,"0");
 
     const kmaTime = `${yyyy}${mm}${dd}${hh}00`;
 

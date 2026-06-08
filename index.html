@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoolBill 기상정보</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>실시간 기상정보 조회</h1>
+
+<select id="region">
+    <option value="108">서울</option>
+    <option value="159">부산</option>
+    <option value="143">대구</option>
+    <option value="156">광주</option>
+    <option value="133">대전</option>
+    <option value="112">인천</option>
+</select>
+
+<button onclick="loadWeather()">
+조회
+</button>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
