@@ -47,17 +47,45 @@ document.getElementById("result").innerHTML = `
 <p><b>💰 예상 냉방비 : ${cost.toFixed(0)} 원</b></p>
 <hr>
 
-<h3>📊 설정온도별 비교</h3>
 
-<p>24℃ 사용 시 : ${cost24.toFixed(0)} 원</p>
-
-<p>26℃ 사용 시 : ${cost26.toFixed(0)} 원</p>
-
-<p>28℃ 사용 시 : ${cost28.toFixed(0)} 원</p>
 
 <p style="color:green">
 💵 예상 절감금액 : 약 ${saveMoney} 원
 </p>
+<h3>📊 설정온도별 비교</h3>
+
+<table border="1" style="margin:auto; border-collapse:collapse;">
+<tr>
+<th>설정온도</th>
+<th>예상요금</th>
+</tr>
+
+<tr>
+<td>24℃</td>
+<td>${Math.round(cost * 1.3)}원</td>
+</tr>
+
+<tr>
+<td>25℃</td>
+<td>${Math.round(cost * 1.15)}원</td>
+</tr>
+
+<tr>
+<td>26℃</td>
+<td>${Math.round(cost)}원</td>
+</tr>
+
+<tr>
+<td>27℃</td>
+<td>${Math.round(cost * 0.9)}원</td>
+</tr>
+
+<tr>
+<td>28℃</td>
+<td>${Math.round(cost * 0.8)}원</td>
+</tr>
+
+</table>
 `;
 
 }
