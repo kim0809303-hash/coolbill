@@ -8,7 +8,9 @@ body {
 
 h1 {
     color: #1e3a8a;
-    font-size: 50px;
+    
+    font-size: clamp(32px, 5vw, 56px);
+
     margin-bottom: 10px;
 }
 
@@ -60,4 +62,12 @@ td {
 .guide {
     color: gray;
     font-size: 14px;
+}
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
 }
