@@ -10,7 +10,6 @@ const res = await fetch(`/api/weather?stn=${stn}`);
 const data = await res.json();
 
 const kwh = (power * hour) / 1000;
-const cost = kwh * 150 * weatherFactor;
 let weatherFactor = 1;
 
 if (data.temp >= 30) {
@@ -25,6 +24,8 @@ else if (data.temp >= 20) {
 else {
     weatherFactor = 0.8;
 }
+const cost = kwh * 150 * weatherFactor;
+
 document.getElementById("result").innerHTML = `
 <h2>${data.region}</h2>
 <p>기온 : ${data.temp}℃</p>
