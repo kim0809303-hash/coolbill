@@ -35,9 +35,27 @@ const hh = String(hour).padStart(2,"0");
         const dataLine = lines[0];
 
         const arr = dataLine.trim().split(/\s+/);
+        const regionName = {
+  "108":"서울",
+  "159":"부산",
+  "143":"대구",
+  "156":"광주",
+  "133":"대전",
+  "112":"인천",
+  "119":"수원",
+  "131":"청주",
+  "138":"포항",
+  "152":"울산",
+  "184":"제주",
+  "129":"서산",
+  "135":"추풍령",
+  "140":"군산",
+  "146":"전주",
+  "155":"창원"
+};
 
         res.status(200).json({
-            region: stn,
+           region: regionName[stn],
             temp: arr[11],
             humidity: arr[13]
         });
