@@ -4,12 +4,13 @@ const stn = document.getElementById("region").value;
 
 const power = Number(document.getElementById("aircon").value);
 const hour = Number(document.getElementById("hour").value);
+const sizeFactor = Number(document.getElementById("size").value);
 
 const res = await fetch(`/api/weather?stn=${stn}`);
 
 const data = await res.json();
 
-const kwh = (power * hour) / 1000;
+const kwh = (power * hour * sizeFactor) / 1000;
 let weatherFactor = 1;
 
 if (data.temp >= 30) {
