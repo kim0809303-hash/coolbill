@@ -27,6 +27,9 @@ else {
 const cost = kwh * 150 * weatherFactor;
 let recommendTemp = 26;
 let saveMoney = Math.round(cost * 0.15);
+const cost24 = cost * 1.14;
+const cost26 = cost;
+const cost28 = cost * 0.86;
 
 document.getElementById("result").innerHTML = `
 <h2>📍 ${data.region}</h2>
@@ -41,6 +44,15 @@ document.getElementById("result").innerHTML = `
 <p>⚡ 예상 사용전력 : ${kwh.toFixed(2)} kWh</p>
 
 <p><b>💰 예상 냉방비 : ${cost.toFixed(0)} 원</b></p>
+<hr>
+
+<h3>📊 설정온도별 비교</h3>
+
+<p>24℃ 사용 시 : ${cost24.toFixed(0)} 원</p>
+
+<p>26℃ 사용 시 : ${cost26.toFixed(0)} 원</p>
+
+<p>28℃ 사용 시 : ${cost28.toFixed(0)} 원</p>
 
 <p style="color:green">
 💵 예상 절감금액 : 약 ${saveMoney} 원
