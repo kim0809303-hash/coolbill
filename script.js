@@ -47,7 +47,7 @@ document.getElementById("result").innerHTML = `
 <p><b>💰 예상 냉방비 : ${cost.toFixed(0)} 원</b></p>
 <hr>
 
-
+터
 
 <p style="color:green">
 💵 예상 절감금액 : 약 ${saveMoney} 원
