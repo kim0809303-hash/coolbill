@@ -35,6 +35,7 @@ const hh = String(hour).padStart(2,"0");
         const dataLine = lines[0];
 
         const arr = dataLine.trim().split(/\s+/);
+        console.log(arr);
     const regionName = {
   "108":"서울",
   "159":"부산",
