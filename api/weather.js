@@ -18,6 +18,7 @@ if(hour < 0){
 const hh = String(hour).padStart(2,"0");
 
     const kmaTime = `${yyyy}${mm}${dd}${hh}00`;
+    console.log("KMA TIME:", kmaTime);
 
     const url =
     `https://apihub.kma.go.kr/api/typ01/url/kma_sfctm2.php?tm=${kmaTime}&stn=${stn}&help=0&authKey=${authKey}`;
